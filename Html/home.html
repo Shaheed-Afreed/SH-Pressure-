@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>S H Pressure Wash</title>
+  <link rel="icon" type="image/png" href="/images/sh_logo.jpeg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0f4;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVIGATION */
+     nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1em 2em;
+    z-index: 10;
+  }
+
+    .nav_div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav_div img {
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .nav-link ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+    }
+
+    .nav-link a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-link a:hover {
+      color: #00aaff;
+    }
+
+    @media (max-width: 600px) {
+      .nav-link ul {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-end;
+      }
+    }
+
+    /* HERO SECTION */
+    .hero-header {
+      position: relative;
+      height: 400px; /* Reduced height */
+      background-image: url('/images/compund.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 2em;
+    }
+
+    .hero-header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+      padding: 0 1em;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-text p {
+      font-size: 1.5em;
+      font-weight: 500;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* CARDS SECTION */
+    .cards-section {
+      max-width: 1200px;
+      margin: 0 auto 3em auto;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+      padding: 0 1em;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 1.5em;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-top: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .card h3 {
+      font-size: 1.3em;
+      color: #00394d;
+      margin-bottom: 0.7em;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 1em;
+      padding: 0 1.5em;
+      flex-grow: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .counter {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #00aaff;
+      margin-top: 1em;
+    }
+
+    /* FOOTER */
+   /* BODY: Remove scrollbar */
+html, body {
+  overflow-x: hidden;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000; /* Solid black */
+  color: #ddd;
+  padding: 0.5em 1em; /* Reduced padding */
+  text-align: center;
+  font-size: 0.75em; /* Smaller text */
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+
+    footer .social-icons {
+      display: flex;
+      gap: 1em;
+    }
+
+    footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+
+    footer .social-icons a:hover img {
+      filter: brightness(0) invert(0.6);
+    }
+
+    /* Responsive text */
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+      .hero-text p {
+        font-size: 1.1em;
+      }
+      .cards-section {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav_div">
+      <img src="/images/sh_logo.jpeg" alt="Pressure Wash Logo" />
+      <div class="nav-link">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-header">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Welcome to S H Pressure Wash</h1>
+      <p>Revive Your Space with Clean & Shine Perfection</p>
+    </div>
+  </header>
+
+  <!-- CARDS -->
+  <section class="cards-section">
+    <div class="card">
+      <img src="/images/project-management.png" alt="Projects Icon" />
+      <h3>Projects</h3>
+      <p>Take a look at our completed pressure wash jobs for homes and businesses.</p>
+      <div class="counter" id="project-count">0+</div>
+    </div>
+
+    <div class="card" id="service-card">
+      <img src="/images/services.png" alt="Services Icon" />
+      <h3>Services</h3>
+      <p>We specialize in full-service pressure washing for buildings, monuments, and other exterior surfaces.</p>
+    </div>
+
+    <div class="card" id="contact-card">
+      <img src="/images/phone-call.png" alt="Contact Icon" />
+      <h3>Contact Us</h3>
+      <p>Need a quote or have questions? Reach out and we’ll respond quickly.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2025 S H Pressure Wash. All rights reserved.</div>
+    
+  </footer>
+
+  <script>
+    // Project counter animation
+    const counter = document.getElementById('project-count');
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      counter.textContent = count + '+';
+      if (count >= 50) clearInterval(interval);
+    }, 30);
+
+     document.getElementById("contact-card").addEventListener("click", function () {
+    window.location.href = "contact.html";
+  });
+     document.getElementById("service-card").addEventListener("click", function () {
+    window.location.href = "service.html";
+  });
+  </script>
+</body>
+</html>

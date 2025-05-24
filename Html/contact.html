@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>S H Pressure Wash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/images/sh_logo.jpeg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0f4;
+      color: #333;
+      text-align: center;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1em 2em;
+      z-index: 10;
+    }
+
+    .nav_div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav_div img {
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .nav-link ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+    }
+
+    .nav-link a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-link a:hover {
+      color: #00aaff;
+    }
+
+    @media (max-width: 600px) {
+      .nav-link ul {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-end;
+      }
+    }
+
+    header {
+      padding: 4em 1em 2em;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #00394d;
+      margin-bottom: 0.5em;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2em 1em 4em;
+    }
+
+    .section-box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2em;
+      margin-bottom: 2em;
+    }
+
+    .section-box h2 {
+      color: #00394d;
+      margin-bottom: 1em;
+    }
+
+    .section-box p {
+      font-size: 1em;
+      margin-bottom: 1em;
+      color: #555;
+    }
+
+    .social-links {
+      margin-top: 1.5em;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 0.8em;
+    }
+
+    .social-links img {
+      width: 36px;
+      height: 36px;
+      transition: transform 0.2s ease;
+    }
+
+    .social-links img:hover {
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+footer {
+  background-color: #000; /* Solid black */
+  color: #ddd;
+  padding: 0.5em 1em; /* Reduced padding */
+  text-align: center;
+  font-size: 0.75em; /* Smaller text */
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+}
+
+    footer .social-icons {
+      display: flex;
+      gap: 1em;
+    }
+
+    footer .social-icons a img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
+    }
+
+    footer .social-icons a:hover img {
+      filter: brightness(0) invert(0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav_div">
+      <img src="/images/sh_logo.jpeg" alt="Pressure Wash Logo" style="width:60px;height: 60px;">
+      <div class="nav-link">
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you — whether it's a question, feedback, or booking!</p>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- About Us -->
+    <div class="section-box">
+      <h2>About Us</h2>
+      <p>S H Pressure Wash is committed to making your property look fresh, clean, and spotless.</p>
+      <p>We offer high-quality pressure washing for homes, buildings, driveways, roofs, and more.</p>
+      <p>Our team values reliability, affordability, and eco-friendly service with a smile.</p>
+    </div>
+
+    <!-- Get in Touch -->
+    <div class="section-box">
+      <h2>Get in Touch</h2>
+      <p><strong>Address:</strong> S H Pressure Wash, 123 Cleaning Lane, CityName, Country</p>
+      <p><strong>Email:</strong> contact@shpressurewash.com</p>
+      <p><strong>Phone:</strong> +123 456 7890</p>
+
+      <h3>Follow Us:</h3>
+      <div class="social-links">
+        <a href="https://instagram.com/yourusername" target="_blank" title="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+        <a href="https://youtube.com/yourchannel" target="_blank" title="YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+        </a>
+        <a href="https://wa.me/yourwhatsapplink" target="_blank" title="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+
+  </div>
+ <footer>
+    <div>© 2025 S H Pressure Wash. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

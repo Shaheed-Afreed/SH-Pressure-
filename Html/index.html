@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>S H Pressure Wash</title>
+  <link rel="icon" type="image/png" href="/images/sh_logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+       background-color: #e6f0f4; /* Light clean background */
+      /* color: #333; */
+    }
+
+    nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1em 2em;
+    z-index: 10;
+  }
+
+    .nav_div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav_div img {
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .nav-link ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+    }
+
+    .nav-link a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-link a:hover {
+      color: #00aaff;
+    }
+
+    @media (max-width: 600px) {
+      .nav-link ul {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-end;
+      }
+    }
+
+    /* Hero Slider */
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .slogan {
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      z-index: 2;
+    }
+     .cards-section {
+  display: flex;
+  justify-content: center;     /* center the row */
+  gap: 2em;                    /* space between cards */
+  padding: 3em 1em;
+  flex-wrap: wrap;            /* allows wrapping on smaller screens */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card h3 {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card p {
+  padding: 0 1em 1em;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.counter .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+}
+
+
+
+    
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav_div">
+      <img src="/images/sh_logo.jpeg" alt="Pressure Wash Logo" style="width:60px;height: 60px;">
+      <div class="nav-link">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('/images/compund.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('/images/bg-1.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('/images/bg-2.webp');"></div>
+    <div class="hero-slide" style="background-image: url('/images/bg-3.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('/images/hero4.jpeg');"></div>
+    <div class="slogan">Revive Your Space With Pressure Wash Perfection</div>
+  </div>
+  
+  <div class="cards-section">
+  <div class="card">
+     <img src="/images/project-management.png" alt="Project Icon" class="card-icon" style=" width: 60px; height: 60px; margin-top: 1em;  display: block;margin: 1em auto 0;">
+    <h3>Projects</h3>
+    <p>Take a look at our completed pressure wash jobs for homes and businesses.</p>
+    <div class="counter">
+     
+      <span id="project-count">0</span>+
+    </div>
+  </div>
+
+  <div class="card" id="services">
+    <img src="/images/services.png" alt="Services" class="card-icon" style=" width: 60px; height: 60px; margin-top: 1em;  display: block;margin: 1em auto 0;">
+    <h3>Services</h3>
+    <p>We specialize in full-service pressure washing for buildings, monuments, and other exterior surfaces.</p>
+
+  </div>
+
+  <div class="card" id="contact" >
+    <img src="/images/phone-call.png" alt="Contact" class="card-icon" style=" width: 60px; height: 60px; margin-top: 1em;  display: block;margin: 1em auto 0;">
+    <h3>Contact Us</h3>
+    <p>Need a quote or have questions? Reach out and we’ll respond quickly.</p>
+  </div>
+</div>
+
+ 
+  
+ <script>
+  const slides = document.querySelectorAll('.hero-slide');
+  const slogan = document.querySelector('.slogan');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+
+    // Show slogan only on the first slide (index 0)
+    if (currentSlide === 0) {
+      slogan.style.display = 'block';
+    } else {
+      slogan.style.display = 'none';
+    }
+  }, 5000);
+
+  let count = 0;
+  const counter = document.getElementById('project-count');
+
+  const interval = setInterval(() => {
+    count++;
+    counter.textContent = count;
+    if (count >= 50) clearInterval(interval);
+  }, 30); 
+</script>
+
+  
+
+</body>
+</html>
